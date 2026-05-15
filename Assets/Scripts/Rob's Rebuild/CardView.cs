@@ -12,6 +12,11 @@ public class CardView : MonoBehaviour
 
     private CardData currentData;
 
+    public CardData CurrentData
+    {
+        get { return currentData; }
+    }
+
     public void Setup(CardData newData)
     {
         currentData = newData;
@@ -19,12 +24,12 @@ public class CardView : MonoBehaviour
         UpdateVisuals();
     }
 
-    private void UpdateVisuals()
+    public void UpdateVisuals()
     {
-        nameText.text = currentData.cardName;
-        manaText.text = currentData.manaCost.ToString();
-        attackText.text = currentData.attack.ToString();
-        healthText.text = currentData.health.ToString();
-        descriptionText.text = currentData.description;
+        nameText.text = CurrentData.cardName;
+        manaText.text = CurrentData.manaCost.ToString();
+        attackText.text = CurrentData.attack.ToString();
+        healthText.text = CurrentData.health.ToString();
+        descriptionText.text = CurrentData.description;
     }
 }
