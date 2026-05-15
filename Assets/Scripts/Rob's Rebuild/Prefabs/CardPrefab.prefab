@@ -1610,6 +1610,7 @@ GameObject:
   - component: {fileID: 1671760588842871556}
   - component: {fileID: 5714559572422621049}
   - component: {fileID: 1905553280800385606}
+  - component: {fileID: 2178820856221131140}
   m_Layer: 5
   m_Name: CardPrefab
   m_TagString: Untagged
@@ -1632,9 +1633,9 @@ RectTransform:
   - {fileID: 725269792516787896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 111.605225, y: -208.78796}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -130}
   m_SizeDelta: {x: 180, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6616363812615333171
@@ -1716,6 +1717,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e510009eca21df34f893a687711910aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2178820856221131140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387302993796552819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &8397362917185924291
 GameObject:
   m_ObjectHideFlags: 0

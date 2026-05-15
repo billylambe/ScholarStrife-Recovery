@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 // Handles dragging cards from the hand onto the board
 
-// This script ONLY handles
-// Dragging
-// Placement
-// Moving between parents
+// This script ONLY handles:
+// - Dragging
+// - Placement
+// - Moving between parents
 
-// This Script does NOT handle Gameplay
+// This script does NOT handle gameplay
 
-// We're using an Interface pattern as well as MonoBehaviour (see comment at end)
+// We're using an Interface pattern as well as MonoBehaviour
 public class CardDragHandler : MonoBehaviour,
-    IBeginDragHandler, 
+    IBeginDragHandler,
     IDragHandler,
     IEndDragHandler
 {
@@ -26,6 +27,16 @@ public class CardDragHandler : MonoBehaviour,
 
     private CardView cardView;
 
+    private LayoutElement layoutElement;
+
+    private GameObject placeholder;
+
+    private LayoutElement placeholderLayout;
+
+    private RectTransform handRect;
+
+    private bool placeholderVisible;
+
     private void Awake()
     {
         // Cache component references
@@ -36,6 +47,9 @@ public class CardDragHandler : MonoBehaviour,
         cardView = GetComponent<CardView>();
 
         canvas = GetComponentInParent<Canvas>();
+
+        layoutElement = GetComponent<LayoutElement>();
+
     }
 
     // Called automatically when dragging starts
@@ -44,8 +58,40 @@ public class CardDragHandler : MonoBehaviour,
         // Store where the card came from
         originalParent = transform.parent;
 
+        // Store the rect it came from for adding the placeholder
+        handRect = originalParent.GetComponent<RectTransform>();
+
+        // Create placeholder object
+        placeholder = new GameObject("Card Placeholder");
+
+        // Add LayoutElement so layout group treats it like a card
+        placeholderLayout =
+            placeholder.AddComponent<LayoutElement>();
+
+        // Match placeholder size to this card
+        LayoutElement thisLayout =
+            GetComponent<LayoutElement>();
+
+        placeholderLayout.preferredWidth =
+            thisLayout.preferredWidth;
+
+        placeholderLayout.preferredHeight =
+            thisLayout.preferredHeight;
+
+        // Put placeholder into original hand
+        placeholder.transform.SetParent(originalParent);
+
+        // Placeholder starts where card came from
+        placeholder.transform.SetSiblingIndex(
+            transform.GetSiblingIndex());
+
+        // Disable layout control while dragging
+        layoutElement.ignoreLayout = true;
+
         // Move to top canvas so it renders above everything
         transform.SetParent(canvas.transform);
+
+        transform.SetAsLastSibling();
 
         // Disable raycast blocking while dragging
         canvasGroup.blocksRaycasts = false;
@@ -55,9 +101,60 @@ public class CardDragHandler : MonoBehaviour,
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.position = eventData.position;
+
+        // Check if mouse is inside the hand panel
+        bool hoveringHand =
+            RectTransformUtility.RectangleContainsScreenPoint(
+                handRect,
+                eventData.position,
+                eventData.pressEventCamera);
+
+        // Show placeholder only while hovering hand
+        // Only change visibility if needed
+        if (hoveringHand != placeholderVisible)
+        {
+            placeholderVisible = hoveringHand;
+
+            placeholder.SetActive(placeholderVisible);
+        }
+
+        // Stop here if not hovering hand
+        if (!hoveringHand)
+        {
+            return;
+        }
+
+        // Move placeholder through hand
+        for (int i = 0; i < originalParent.childCount; i++)
+        {
+            Transform child = originalParent.GetChild(i);
+
+            // Skip placeholder itself
+            if (child == placeholder.transform)
+            {
+                continue;
+            }
+
+            RectTransform childRect =
+    child.GetComponent<RectTransform>();
+
+            // Get horizontal center of this card
+            float childCenter =
+                childRect.position.x;
+
+            // Only move placeholder once mouse crosses center
+            if (eventData.position.x < childCenter)
+            {
+                placeholder.transform.SetSiblingIndex(i);
+
+                return;
+            }
+        }
+
+        // Otherwise move to end
+        placeholder.transform.SetAsLastSibling();
     }
 
-    // Called automatically when dragging ends
     // Called automatically when dragging ends
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -65,46 +162,78 @@ public class CardDragHandler : MonoBehaviour,
 
         GameObject hoveredObject = eventData.pointerEnter;
 
-        // Debug what object we released over
-        if (hoveredObject != null)
-        {
-            Debug.Log("Released over: " + hoveredObject.name);
-        }
-        else
-        {
-            Debug.Log("Released over: NOTHING");
-        }
-
         // No valid target
         if (hoveredObject == null)
         {
-            Debug.Log("No hovered object found. Returning to hand.");
-
             ReturnToHand();
 
             return;
         }
+
+
+        // Check if hovering over the hand
+        HandManager hand =
+            hoveredObject.GetComponentInParent<HandManager>();
+
+        if (hand != null)
+        {
+            // Return to hand panel
+            transform.SetParent(originalParent);
+
+            // Re-enable layout
+            layoutElement.ignoreLayout = false;
+
+            int newSiblingIndex = originalParent.childCount;
+
+            // Check all cards currently in hand
+            for (int i = 0; i < originalParent.childCount; i++)
+            {
+                Transform child = originalParent.GetChild(i);
+
+                // Skip ourselves
+                if (child == transform)
+                {
+                    continue;
+                }
+
+                // If mouse is left of this card,
+                // insert before it
+                if (eventData.position.x < child.position.x)
+                {
+                    newSiblingIndex = i;
+
+                    // If we're moving forward in the hierarchy,
+                    // offset index correctly
+                    if (transform.GetSiblingIndex() < newSiblingIndex)
+                    {
+                        newSiblingIndex--;
+                    }
+
+                    break;
+                }
+            }
+
+            // Move card into calculated position
+            transform.SetSiblingIndex(newSiblingIndex);
+
+            return;
+        }
+
 
         // Check for a board slot
-        BoardSlot slot = hoveredObject.GetComponent<BoardSlot>();
+        BoardSlot slot = hoveredObject.GetComponentInParent<BoardSlot>();
 
-        // No BoardSlot component found
+        // Invalid placement target
         if (slot == null)
         {
-            Debug.Log("Hovered object is NOT a BoardSlot.");
-
             ReturnToHand();
 
             return;
         }
-
-        Debug.Log("Valid BoardSlot found.");
 
         // Prevent placement on occupied slots
         if (slot.occupied)
         {
-            Debug.Log("Slot already occupied.");
-
             ReturnToHand();
 
             return;
@@ -113,18 +242,12 @@ public class CardDragHandler : MonoBehaviour,
         // Check mana cost
         int manaCost = cardView.CurrentData.manaCost;
 
-        Debug.Log("Card mana cost: " + manaCost);
-
         if (!ManaManager.Instance.HasEnoughMana(manaCost))
         {
-            Debug.Log("Not enough mana.");
-
             ReturnToHand();
 
             return;
         }
-
-        Debug.Log("Placement successful.");
 
         // Spend mana
         ManaManager.Instance.SpendMana(manaCost);
@@ -133,14 +256,20 @@ public class CardDragHandler : MonoBehaviour,
         slot.occupied = true;
 
         // Move card onto board
-        transform.SetParent(slot.transform);
+        transform.SetParent(slot.transform, false);
 
-        rectTransform.anchoredPosition = Vector2.zero;
+        // Disable layout permanently once on board
+        layoutElement.ignoreLayout = true;
+
+        // Snap to center of slot
+        rectTransform.localPosition = Vector3.zero;
 
         // Update tracking lists
         HandManager.Instance.RemoveCard(cardView);
 
         BoardManager.Instance.AddToBoard(cardView);
+
+        Destroy(placeholder);
 
         // Disable dragging once played
         enabled = false;
@@ -149,16 +278,32 @@ public class CardDragHandler : MonoBehaviour,
     // Return the card back to the hand
     private void ReturnToHand()
     {
+        // Re-enable layout when returning to hand
+        layoutElement.ignoreLayout = false;
+
+        // Return to hand
         transform.SetParent(originalParent);
 
-        rectTransform.anchoredPosition = Vector2.zero;
+        placeholder.SetActive(true);
+
+        // Snap into placeholder position
+        transform.SetSiblingIndex(
+            placeholder.transform.GetSiblingIndex());
+
+        // Re-enable layout
+        layoutElement.ignoreLayout = false;
+
+        // Destroy placeholder
+        Destroy(placeholder);
     }
 }
 
-// Hi Billy, notes in Interfaces if you havent used them before:
+// Hi Billy, notes on Interfaces if you havent used them before:
 
 // Interfaces define a required set of functions a class must contain.
 // By implementing "IBeginDragHandler"
 // Unity now EXPECTS this function to exist:
 // public void OnBeginDrag(PointerEventData eventData)
-// That is how Unity’s UI EventSystem knows which functions to call automatically during dragging.
+
+// That is how Unity’s UI EventSystem knows which functions
+// to call automatically during dragging.

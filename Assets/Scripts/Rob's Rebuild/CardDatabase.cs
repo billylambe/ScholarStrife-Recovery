@@ -11,42 +11,59 @@ using UnityEngine;
 // Easy breakpoints
 // No hidden asset dependecies
 
-
 public class CardDatabase : MonoBehaviour
 {
-    public static CardDatabase Instance; // A singular instance of the database
+    public static CardDatabase Instance;
 
-    public List<CardData> allCards = new List<CardData>(); // The public list of cards
+    public List<CardData> allCards = new List<CardData>();
 
-    private void Awake() // On awake we initiaize the database
+    private void Awake()
     {
         Instance = this;
 
         BuildDatabase();
     }
 
-    private void BuildDatabase() // Builds the database using the card data below (you'll add more later)
+    private void BuildDatabase()
     {
-        CardData goblin = new CardData();
+        // I used ChatGPT to make some random card values so make sure you replace these
+        CreateCard("Goblin", 1, 2, 1, "A weak aggressive creature.");
+        CreateCard("Knight", 3, 4, 5, "A durable frontline fighter.");
+        CreateCard("Wolf", 2, 3, 2, "Fast and relentless.");
+        CreateCard("Archer", 2, 2, 3, "Attacks safely from range.");
+        CreateCard("Golem", 5, 6, 8, "Heavy defensive unit.");
+        CreateCard("Mage", 4, 5, 3, "Master of arcane power.");
+        CreateCard("Bandit", 1, 1, 2, "Cheap early pressure.");
+        CreateCard("Paladin", 4, 4, 6, "Balanced holy warrior.");
+        CreateCard("Dragon", 8, 10, 10, "Massive late-game threat.");
+        CreateCard("Slime", 1, 1, 3, "Weak but durable.");
+        CreateCard("Assassin", 3, 5, 2, "High damage glass cannon.");
+        CreateCard("Priest", 2, 1, 4, "Support focused unit.");
+        CreateCard("Skeleton", 1, 2, 1, "Fragile undead servant.");
+        CreateCard("Warlock", 5, 7, 4, "Dark magic specialist.");
+        CreateCard("Guard", 2, 2, 5, "Reliable defender.");
+        CreateCard("Berserker", 4, 7, 3, "Extremely aggressive.");
+        CreateCard("Druid", 3, 3, 4, "Nature attuned fighter.");
+        CreateCard("Phoenix", 6, 7, 5, "Rare mythical creature.");
+        CreateCard("Pirate", 2, 3, 2, "Quick attacking rogue.");
+        CreateCard("King", 7, 8, 8, "Leader of the battlefield.");
+    }
 
-        goblin.cardName = "Goblin";
-        goblin.manaCost = 1;
-        goblin.attack = 2;
-        goblin.health = 1;
-        goblin.description = "A weak but aggressive creature.";
+    private void CreateCard(
+        string name,
+        int mana,
+        int attack,
+        int health,
+        string description)
+    {
+        CardData newCard = new CardData();
 
-        allCards.Add(goblin);
+        newCard.cardName = name;
+        newCard.manaCost = mana;
+        newCard.attack = attack;
+        newCard.health = health;
+        newCard.description = description;
 
-
-
-        CardData knight = new CardData();
-
-        knight.cardName = "Knight";
-        knight.manaCost = 3;
-        knight.attack = 4;
-        knight.health = 5;
-        knight.description = "A durable frontline fighter.";
-
-        allCards.Add(knight);
+        allCards.Add(newCard);
     }
 }

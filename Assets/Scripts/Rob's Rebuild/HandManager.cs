@@ -9,6 +9,14 @@ public class HandManager : MonoBehaviour
 {
     public static HandManager Instance;
 
+    [Header("Hand Settings")]
+    public Transform handPanel;
+
+    public GameObject cardPrefab;
+
+    public int startingHandSize = 7; // Change this to better suit your game design
+
+    [Header("Runtime Hand")]
     public List<CardView> cardsInHand = new List<CardView>();
 
     private void Awake()
@@ -16,9 +24,24 @@ public class HandManager : MonoBehaviour
         Instance = this;
     }
 
-    public void AddCard(CardView card)
+    // Spawn a card into the hand
+    public void DrawCardToHand(CardData cardData)
     {
-        cardsInHand.Add(card);
+        // Create the card prefab
+        GameObject newCardObject =
+            Instantiate(cardPrefab, handPanel);
+
+        // Get the CardView component
+        CardView newCard =
+            newCardObject.GetComponent<CardView>();
+
+        // Inject card data into the visuals
+        newCard.Setup(cardData);
+
+        // Track card in hand
+        cardsInHand.Add(newCard);
+
+        Debug.Log("Added " + cardData.cardName + " to hand.");
     }
 
     public void RemoveCard(CardView card)
