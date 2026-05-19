@@ -15,29 +15,14 @@ public class GameManager : MonoBehaviour
         // Shuffle the deck
         DeckManager.Instance.ShuffleDeck();
 
-        // Draw opening hand
-        DrawOpeningHand();
+        // Draw opening hands
+        DrawOpeningHands();
     }
 
-    private void DrawOpeningHand()
+    private void DrawOpeningHands()
     {
-        for (int i = 0; i < HandManager.Instance.startingHandSize; i++)
-        {
-            CardData playerCard =
-                DeckManager.Instance.DrawCard();
+        HandManager.Instance.DrawCards(CardOwner.Player, HandManager.Instance.startingHandSize);
 
-            HandManager.Instance.DrawCardToHand(
-                playerCard,
-                CardOwner.Player
-            );
-
-            CardData enemyCard =
-                DeckManager.Instance.DrawCard();
-
-            HandManager.Instance.DrawCardToHand(
-                enemyCard,
-                CardOwner.Enemy
-            );
-        }
+        HandManager.Instance.DrawCards(CardOwner.Enemy, HandManager.Instance.startingHandSize);
     }
 }

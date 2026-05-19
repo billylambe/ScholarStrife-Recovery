@@ -117,6 +117,9 @@ public class CardCombat : MonoBehaviour
 
         BoardManager.Instance.cardsOnBoard.Remove(cardView);
 
+        // Send card data to discard pile
+        DiscardManager.Instance.AddToDiscard(cardView.CurrentData,owner);
+
         Destroy(gameObject);
     }
 }
