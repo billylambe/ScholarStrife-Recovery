@@ -2,16 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Handles dragging cards from the hand onto the board
-
-// This script ONLY handles:
-// - Dragging
-// - Placement
-// - Moving between parents
-
-// This script does NOT handle gameplay
-
-// We're using an Interface pattern as well as MonoBehaviour
 public class CardDragHandler : MonoBehaviour,
     IBeginDragHandler,
     IDragHandler,
@@ -93,6 +83,9 @@ public class CardDragHandler : MonoBehaviour,
         BoardSlot slot =
             hoveredObject.GetComponentInParent<BoardSlot>();
 
+        // Set combat for card
+        
+
         // Successful board placement
         if (slot != null && !slot.occupied)
         {
@@ -109,8 +102,27 @@ public class CardDragHandler : MonoBehaviour,
             // Spend mana
             ManaManager.Instance.SpendMana(manaCost);
 
+            CardCombat combat = GetComponent<CardCombat>();
+
+            // Prevent placing onto the wrong side
+            if (slot.owner != combat.owner)
+            {
+                ReturnToHand();
+
+                return;
+            }
+
             // Mark slot occupied
             slot.occupied = true;
+
+            // Store current card in slot
+            slot.currentCard = cardView;
+
+            // Store slot reference
+            combat.SetSlot(slot);
+
+            // Mark card as "on the board"
+            combat.isOnBoard = true;
 
             // Move card onto board
             transform.SetParent(slot.transform, false);
@@ -193,16 +205,9 @@ public class CardDragHandler : MonoBehaviour,
 
         // Move to end of hand
         transform.SetAsLastSibling();
+
+        // Snap back into layout position
+        rectTransform.localPosition = Vector3.zero;
     }
 }
-
-// Hi Billy, notes on Interfaces if you havent used them before:
-
-// Interfaces define a required set of functions a class must contain.
-// By implementing "IBeginDragHandler"
-// Unity now EXPECTS this function to exist:
-// public void OnBeginDrag(PointerEventData eventData)
-
-// That is how Unity’s UI EventSystem knows which functions
-// to call automatically during dragging.
 

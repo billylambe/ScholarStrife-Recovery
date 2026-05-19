@@ -23,14 +23,21 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < HandManager.Instance.startingHandSize; i++)
         {
-            CardData drawnCard =
+            CardData playerCard =
                 DeckManager.Instance.DrawCard();
 
-            // Safety check
-            if (drawnCard != null)
-            {
-                HandManager.Instance.DrawCardToHand(drawnCard);
-            }
+            HandManager.Instance.DrawCardToHand(
+                playerCard,
+                CardOwner.Player
+            );
+
+            CardData enemyCard =
+                DeckManager.Instance.DrawCard();
+
+            HandManager.Instance.DrawCardToHand(
+                enemyCard,
+                CardOwner.Enemy
+            );
         }
     }
 }

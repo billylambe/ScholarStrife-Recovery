@@ -29,7 +29,12 @@ public class CardView : MonoBehaviour
         nameText.text = CurrentData.cardName;
         manaText.text = CurrentData.manaCost.ToString();
         attackText.text = CurrentData.attack.ToString();
-        healthText.text = CurrentData.health.ToString();
         descriptionText.text = CurrentData.description;
+    }
+
+    // Runtime combat health updates
+    public void UpdateHealthText(int currentHealth)
+    {
+        healthText.text = currentHealth.ToString();
     }
 }
