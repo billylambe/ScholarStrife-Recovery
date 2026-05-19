@@ -118,4 +118,6 @@ public class HandManager : MonoBehaviour
             enemyHand.Remove(card);
         }
     }
+
+
 }

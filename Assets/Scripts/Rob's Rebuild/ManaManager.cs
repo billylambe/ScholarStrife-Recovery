@@ -1,31 +1,57 @@
 using UnityEngine;
-// Game Manager that keeps track of current mana resources
-// We're not putting it inside the card system itself, which from going through your codebase it looks like you were attempting.
 
-//If the logic fails it fails everywhere not on singular broken cards
-// Therefore we check the logic here to fix it
 public class ManaManager : MonoBehaviour
 {
     public static ManaManager Instance;
 
-    public int currentMana = 3;
+    [Header("Player Mana")]
+    public int playerMana = 1;
+
+    [Header("Enemy Mana")]
+    public int enemyMana = 1;
 
     private void Awake()
     {
-        Instance = this; // Set to an instance
-        Debug.Log($"[Mana Manager] - Current Mana = {currentMana}");
+        Instance = this;
     }
 
-    public bool HasEnoughMana(int cost) // Checks whether the player has enough mana for the requested action
+    public bool HasEnoughMana(CardOwner owner, int cost)
     {
-        Debug.Log($"[Mana Manager] - Mana Check returned - {currentMana >= cost}");
-        return currentMana >= cost;
-        
+        if (owner == CardOwner.Player)
+        {
+            return playerMana >= cost;
+        }
+
+        return enemyMana >= cost;
     }
 
-    public void SpendMana(int amount) // Spends Mana when called
+    public void SpendMana(CardOwner owner, int amount)
     {
-        currentMana -= amount;
-        Debug.Log($"[Mana Manager] - Mana Spent: {amount}, current Mana: {currentMana}");
+        if (owner == CardOwner.Player)
+        {
+            playerMana -= amount;
+
+            Debug.Log("Player spent " + amount + " mana.");
+        }
+        else
+        {
+            enemyMana -= amount;
+
+            Debug.Log("Enemy spent " + amount + " mana.");
+        }
+    }
+
+    public void SetMana(int amount)
+    {
+        playerMana = amount;
+
+        Debug.Log("Player mana refilled to " + amount);
+    }
+
+    public void SetEnemyMana(int amount)
+    {
+        enemyMana = amount;
+
+        Debug.Log("Enemy mana refilled to " + amount);
     }
 }

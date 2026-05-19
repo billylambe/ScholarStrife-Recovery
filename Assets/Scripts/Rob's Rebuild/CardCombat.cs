@@ -17,6 +17,8 @@ public class CardCombat : MonoBehaviour
 
     public bool isOnBoard = false;
 
+    public bool canAttack = true;
+
     private void Awake()
     {
         // Cache CardView reference
@@ -63,40 +65,37 @@ public class CardCombat : MonoBehaviour
     // Attack another card
     public void AttackCard(CardCombat target)
     {
-        int myAttack =
-            cardView.CurrentData.attack;
+        if (!canAttack)
+        {
+            Debug.Log("Card already attacked this turn.");
 
-        int targetAttack =
-            target.cardView.CurrentData.attack;
+            return;
+        }
 
-        // Attacker deals damage first
+        canAttack = false;
+
+        int myAttack = cardView.CurrentData.attack;
+
+        int targetAttack = target.cardView.CurrentData.attack;
+
         target.TakeDamage(myAttack);
 
-        // Defender only retaliates if still alive
         if (!target.isDead)
-            {
+        {
             TakeDamage(targetAttack);
         }
 
-        Debug.Log(
-            cardView.CurrentData.cardName +
-            " attacked " +
-            target.cardView.CurrentData.cardName
-        );
+        Debug.Log(cardView.CurrentData.cardName + " attacked " + target.cardView.CurrentData.cardName);
     }
 
-    // Attack a player directly
+    // Attack a player directly - Not sure if you want this feature but here's an outline of attacking the "player" not a card
     public void AttackPlayer(PlayerHealth player)
     {
         int myAttack = cardView.CurrentData.attack;
 
         player.TakeDamage(myAttack);
 
-        Debug.Log(
-            cardView.CurrentData.cardName +
-            " attacked the player for " +
-            myAttack
-        );
+        Debug.Log(cardView.CurrentData.cardName + " attacked the player for " + myAttack);
     }
 
     // Destroy this card
@@ -119,6 +118,9 @@ public class CardCombat : MonoBehaviour
 
         // Send card data to discard pile
         DiscardManager.Instance.AddToDiscard(cardView.CurrentData,owner);
+
+        // prevent dead cards from staying selected
+        CombatManager.Instance.ResetSelection();
 
         Destroy(gameObject);
     }

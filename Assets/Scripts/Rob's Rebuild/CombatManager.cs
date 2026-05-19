@@ -4,6 +4,8 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
 
+    public CardCombat selectedAttacker;
+
     private void Awake()
     {
         Instance = this;
@@ -15,6 +17,7 @@ public class CombatManager : MonoBehaviour
         CardCombat defender)
     {
         attacker.AttackCard(defender);
+        CombatManager.Instance.ResetSelection();
     }
 
     // Card attacks player directly
@@ -23,5 +26,11 @@ public class CombatManager : MonoBehaviour
         PlayerHealth targetPlayer)
     {
         attacker.AttackPlayer(targetPlayer);
+    }
+
+    // Reset selections after attacks
+    public void ResetSelection()
+    {
+        selectedAttacker = null;
     }
 }

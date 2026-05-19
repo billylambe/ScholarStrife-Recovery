@@ -15,7 +15,7 @@ public class CardTargeting : MonoBehaviour,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Ignore cards that are not on the board
+        // Ignore cards not on the board
         if (!myCombat.isOnBoard)
         {
             return;
@@ -24,6 +24,14 @@ public class CardTargeting : MonoBehaviour,
         // First click selects attacker
         if (selectedAttacker == null)
         {
+            // Cannot attack twice in one turn
+            if (!myCombat.canAttack)
+            {
+                Debug.Log("Card already attacked this turn.");
+
+                return;
+            }
+
             selectedAttacker = myCombat;
 
             Debug.Log(myCombat.name +
@@ -55,7 +63,10 @@ public class CardTargeting : MonoBehaviour,
             selectedAttacker,
             myCombat);
 
-        // Reset selection
+        // Mark attacker as used
+        selectedAttacker.canAttack = false;
+
+        // Clear selection
         selectedAttacker = null;
     }
 }
