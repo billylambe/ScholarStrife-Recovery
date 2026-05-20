@@ -88,16 +88,6 @@ public class CardCombat : MonoBehaviour
         Debug.Log(cardView.CurrentData.cardName + " attacked " + target.cardView.CurrentData.cardName);
     }
 
-    // Attack a player directly - Not sure if you want this feature but here's an outline of attacking the "player" not a card
-    public void AttackPlayer(PlayerHealth player)
-    {
-        int myAttack = cardView.CurrentData.attack;
-
-        player.TakeDamage(myAttack);
-
-        Debug.Log(cardView.CurrentData.cardName + " attacked the player for " + myAttack);
-    }
-
     // Destroy this card
     private void Die()
     {

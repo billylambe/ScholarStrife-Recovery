@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class CardTargeting : MonoBehaviour,
     IPointerClickHandler
 {
-    private static CardCombat selectedAttacker;
+    public static CardCombat selectedAttacker;
 
     private CardCombat myCombat;
 

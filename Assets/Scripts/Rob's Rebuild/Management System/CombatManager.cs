@@ -20,13 +20,6 @@ public class CombatManager : MonoBehaviour
         CombatManager.Instance.ResetSelection();
     }
 
-    // Card attacks player directly
-    public void ResolvePlayerAttack(
-        CardCombat attacker,
-        PlayerHealth targetPlayer)
-    {
-        attacker.AttackPlayer(targetPlayer);
-    }
 
     // Reset selections after attacks
     public void ResetSelection()

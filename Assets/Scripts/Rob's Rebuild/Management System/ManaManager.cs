@@ -13,6 +13,18 @@ public class ManaManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        Debug.Log("ManaManager Awake");
+    }
+
+    private void Update()
+    {
+        Debug.Log(
+            "LIVE MANA | Player: " +
+            playerMana +
+            " Enemy: " +
+            enemyMana
+        );
     }
 
     public bool HasEnoughMana(CardOwner owner, int cost)
@@ -43,15 +55,19 @@ public class ManaManager : MonoBehaviour
 
     public void SetMana(int amount)
     {
+        Debug.Log("SetMana Called With: " + amount);
+
         playerMana = amount;
 
-        Debug.Log("Player mana refilled to " + amount);
+        Debug.Log("Player mana now: " + playerMana);
     }
 
     public void SetEnemyMana(int amount)
     {
+        Debug.Log("SetEnemyMana Called With: " + amount);
+
         enemyMana = amount;
 
-        Debug.Log("Enemy mana refilled to " + amount);
+        Debug.Log("Enemy mana now: " + enemyMana);
     }
 }

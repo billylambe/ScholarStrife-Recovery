@@ -18,4 +18,21 @@ public class BoardManager : MonoBehaviour
     {
         cardsOnBoard.Add(card);
     }
+
+    // Checks if a side has cards on the board
+    public bool HasCardsOnBoard(CardOwner owner)
+    {
+        foreach (CardView card in cardsOnBoard)
+        {
+            CardCombat combat =
+                card.GetComponent<CardCombat>();
+
+            if (combat.owner == owner)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
