@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMenu : MonoBehaviour
-{
-    [SerializeField] private string gameSceneName;
 
-    public void Play()
+public class TutorialButton : MonoBehaviour
+{
+
+    [SerializeField] private string gameSceneName;
+    public void Tutorial()
     {
         SceneManager.LoadScene(gameSceneName);
     }
-
-    
 }
+

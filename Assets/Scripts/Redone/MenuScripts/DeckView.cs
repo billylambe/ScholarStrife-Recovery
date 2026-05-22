@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMenu : MonoBehaviour
-{
-    [SerializeField] private string gameSceneName;
 
-    public void Play()
+public class DeckView : MonoBehaviour
+{
+
+    [SerializeField] private string gameSceneName;
+    public void Deck()
     {
         SceneManager.LoadScene(gameSceneName);
     }
-
-    
 }
