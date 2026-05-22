@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2931,6 +2931,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_margin.z
+      value: 0.15830469
+      objectReference: {fileID: 0}
+    - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903638894947924275, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -166
+      objectReference: {fileID: 0}
     - target: {fileID: 5529335867185387258, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_Name
       value: healthText
@@ -2951,9 +2963,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_margin.z
+      value: 0.20291138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8387302993796552819, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_Name
       value: PlayerHeroCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956225468490267130, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956225468490267130, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956225468490267130, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -234.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
