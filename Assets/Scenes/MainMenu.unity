@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 174805200}
   - component: {fileID: 174805201}
   m_Layer: 0
-  m_Name: MainMenu
+  m_Name: PlayDeck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0d20a7890ffd4b8c8c09bafeb4368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Redone
+  gameSceneName: GameDeck1
 --- !u!1 &282513230
 GameObject:
   m_ObjectHideFlags: 0
