@@ -1744,7 +1744,8 @@ MonoBehaviour:
     the card game is a turn based game. \n\nThe turn order is seperated between the
     Players turn and the Opponents turn. The turn order starts with the Players turn,
     then becomes the Opponents turn, then the player again and this loop continues
-    until a winner is declaired. "
+    until a winner is declaired by having the player or enemies health reduced to
+    0 (Zero) "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

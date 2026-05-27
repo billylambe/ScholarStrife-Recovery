@@ -1327,8 +1327,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1283468424}
-        m_TargetAssemblyTypeName: CardRules, Assembly-CSharp
-        m_MethodName: Cardrules
+        m_TargetAssemblyTypeName: GameplayMenu, Assembly-CSharp
+        m_MethodName: GLoop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1816,10 +1816,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1283468422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9ffc53f90903b4fa66431049ed3a37, type: 3}
+  m_Script: {fileID: 11500000, guid: c40b201cd8ec32c4aa87d02d64dbd346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: CardRules
+  gameSceneName: TurnOrderRules
 --- !u!1 &1578554782
 GameObject:
   m_ObjectHideFlags: 0
