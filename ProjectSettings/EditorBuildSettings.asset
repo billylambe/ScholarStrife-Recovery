@@ -17,6 +17,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 6a88aec58a1efe54a9a0902c82b87ae7
+  - enabled: 1
+    path: Assets/Scenes/CardRules.unity
+    guid: 17b7fe173c35eb64097e3f509a17ac24
+  - enabled: 1
+    path: Assets/Scenes/ETurnRules.unity
+    guid: 13c5479bb2b8fb74a857ebe004aaae54
+  - enabled: 1
+    path: Assets/Scenes/GameRules.unity
+    guid: b32553220506a6249a3c95cd366d81c5
+  - enabled: 1
+    path: Assets/Scenes/ResourceRules.unity
+    guid: 4f1bf0827a4b6074bac0edd8bf8ccf8a
+  - enabled: 1
+    path: Assets/Scenes/TurnOrderRules.unity
+    guid: dfcc57125ce056f4c8bde17c84e0af6b
+  - enabled: 1
+    path: Assets/Scenes/YTurnRules.unity
+    guid: f9a664aba387bc2418d275aabe9021db
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
