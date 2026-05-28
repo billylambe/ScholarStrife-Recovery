@@ -90,6 +90,8 @@ public class CardDatabase : MonoBehaviour
         CreateCard("Phoenix", 6, 7, 5, "Rare mythical creature.");
         CreateCard("Pirate", 2, 3, 2, "Quick attacking rogue.");
         CreateCard("King", 7, 8, 8, "Leader of the battlefield.");
+
+        CreateCard("Echo Master", 6, 3, 4, "Teller of great stories."); //tom's custom card as a prize for winning on first try
     }
 
     private void CreateCard(
