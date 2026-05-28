@@ -3853,6 +3853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a684abb78b2c0745a944d3d87ac29fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deck1Scene: GameDeck1
+  deck2Scene: GameDeck2
   allCards: []
 --- !u!4 &2069359002
 Transform:
