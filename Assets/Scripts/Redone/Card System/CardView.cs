@@ -13,6 +13,9 @@ public class CardView : MonoBehaviour
 
     private CardData currentData;
 
+    public ArtworkManager GetArtwork;
+
+
     public CardData CurrentData
     {
         get { return currentData; }
@@ -31,7 +34,7 @@ public class CardView : MonoBehaviour
         manaText.text = CurrentData.manaCost.ToString();
         attackText.text = CurrentData.attack.ToString();
         descriptionText.text = CurrentData.description;
-       // cardSprite = ArtworkManager.GetArtwork(string.id);
+       // cardSprite = ArtworkManager.GetArtwork(CurrentData.cardName);
     }
 
     // Runtime combat health updates
