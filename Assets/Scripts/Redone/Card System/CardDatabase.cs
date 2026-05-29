@@ -47,11 +47,18 @@ public class CardDatabase : MonoBehaviour
 
             BuildDatabase2();
         }
+
+        if (scene.name == "GameDeckCrazy")
+        {
+            Instance = this;
+
+            BuildDatabase3();
+        }
     }
 
     private void BuildDatabase()
     {
-        // I used ChatGPT to make some random card values so make sure you replace these
+        
         CreateCard("Goblin", 1, 2, 1, "A weak aggressive creature.");
         CreateCard("Knight", 3, 4, 5, "A durable frontline fighter.");
         CreateCard("Wolf", 2, 3, 2, "Fast and relentless.");
@@ -76,7 +83,7 @@ public class CardDatabase : MonoBehaviour
 
     private void BuildDatabase2()
     {
-        // I used ChatGPT to make some random card values so make sure you replace these
+        
         CreateCard("test", 1, 2, 1, "A weak aggressive creature.");
         CreateCard("test", 3, 4, 5, "A durable frontline fighter.");
         CreateCard("Wtest", 2, 3, 2, "Fast and relentless.");
@@ -101,6 +108,32 @@ public class CardDatabase : MonoBehaviour
         CreateCard("Echo Master", 6, 3, 4, "Teller of great stories."); //tom's custom card as a prize for winning on first try
     }
 
+
+    private void BuildDatabase3()
+    {
+
+        CreateCard("Goblin", 1, 2, 1, "A weak aggressive creature.");
+        CreateCard("Knight", 3, 4, 5, "A durable frontline fighter.");
+        CreateCard("Wolf", 2, 3, 2, "Fast and relentless.");
+        CreateCard("Archer", 2, 2, 3, "Attacks safely from range.");
+        CreateCard("Golem", 5, 6, 8, "Heavy defensive unit.");
+        CreateCard("Mage", 4, 5, 3, "Master of arcane power.");
+        CreateCard("Bandit", 1, 1, 2, "Cheap early pressure.");
+        CreateCard("Paladin", 4, 4, 6, "Balanced holy warrior.");
+        CreateCard("Dragon", 8, 10, 10, "Massive late-game threat.");
+        CreateCard("Slime", 1, 1, 3, "Weak but durable.");
+        CreateCard("Assassin", 3, 5, 2, "High damage glass cannon.");
+        CreateCard("Priest", 2, 1, 4, "Support focused unit.");
+        CreateCard("Skeleton", 1, 2, 1, "Fragile undead servant.");
+        CreateCard("Warlock", 5, 7, 4, "Dark magic specialist.");
+        CreateCard("Guard", 2, 2, 5, "Reliable defender.");
+        CreateCard("Berserker", 4, 7, 3, "Extremely aggressive.");
+        CreateCard("Druid", 3, 3, 4, "Nature attuned fighter.");
+        CreateCard("Phoenix", 6, 7, 5, "Rare mythical creature.");
+        CreateCard("Pirate", 2, 3, 2, "Quick attacking rogue.");
+        CreateCard("King", 7, 8, 8, "Leader of the battlefield.");
+        CreateCard("Echo Master", 6, 3, 4, "Teller of great stories."); //tom's custom card as a prize for winning on first try
+    }
     private void CreateCard(
         string name,
         int mana,
