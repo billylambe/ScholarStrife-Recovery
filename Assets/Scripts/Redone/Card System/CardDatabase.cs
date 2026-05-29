@@ -30,6 +30,13 @@ public class CardDatabase : MonoBehaviour
 
             BuildDatabase();
         }
+
+        if (scene.name == "Deck1Incremental")
+        {
+            Instance = this;
+
+            BuildDatabase();
+        }
         //Instance = this;
 
         //BuildDatabase();

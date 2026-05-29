@@ -5,11 +5,16 @@ public class ManaManager : MonoBehaviour
     public static ManaManager Instance;
 
     [Header("Player Mana")]
-    public int playerMana = 1;
+    public int playerMana = 0;
 
     [Header("Enemy Mana")]
-    public int enemyMana = 1;
+    public int enemyMana = 0;
 
+    //[Header("dices")]
+    //public int Dice1;
+    //public int Dice2;
+
+    
     private void Awake()
     {
         Instance = this;
@@ -55,6 +60,11 @@ public class ManaManager : MonoBehaviour
 
     public void SetMana(int amount)
     {
+        //Dice1 = Random.Range(1, 6);
+        //Dice2 = Random.Range(1, 6);
+
+        //amount = amount + Dice2 + Dice1;
+
         Debug.Log("SetMana Called With: " + amount);
 
         playerMana = amount;

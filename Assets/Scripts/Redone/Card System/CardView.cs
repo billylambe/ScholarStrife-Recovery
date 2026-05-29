@@ -9,6 +9,7 @@ public class CardView : MonoBehaviour
     public TMP_Text attackText;
     public TMP_Text healthText;
     public TMP_Text descriptionText;
+    public Sprite cardSprite;
 
     private CardData currentData;
 
@@ -30,6 +31,7 @@ public class CardView : MonoBehaviour
         manaText.text = CurrentData.manaCost.ToString();
         attackText.text = CurrentData.attack.ToString();
         descriptionText.text = CurrentData.description;
+       // cardSprite = ArtworkManager.GetArtwork(string.id);
     }
 
     // Runtime combat health updates

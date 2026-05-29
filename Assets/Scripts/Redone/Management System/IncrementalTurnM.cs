@@ -1,25 +1,20 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class TurnManager : MonoBehaviour
+public class IncrementalTurnM : MonoBehaviour
 {
-    public static TurnManager Instance;
+    public static IncrementalTurnM Instance;
 
-    
+
 
     [Header("Current Turn")]
     public CardOwner currentTurn = CardOwner.Player;
 
     [Header("Mana Settings")]
-    public int startingMana = 0;
+    public int startingMana = 1;
 
-    public int manaIncreasePerTurn = 0;
+    public int manaIncreasePerTurn = 1;
 
     public int maxMana = 10;
-
-    [Header("dices")]
-    public int Dice1;
-    public int Dice2;
-
 
     private void Awake()
     {
@@ -30,12 +25,6 @@ public class TurnManager : MonoBehaviour
 
     private void Start()
     {
-
-        //Dice1 = Random.Range(1, 6);
-        //Dice2 = Random.Range(1, 6);
-
-        //startingMana = Dice2 + Dice1;
-
         Debug.Log("=== TURN MANAGER START ===");
 
         Debug.Log("Starting Mana Inspector Value: " + startingMana);
@@ -53,11 +42,6 @@ public class TurnManager : MonoBehaviour
 
     public void StartPlayerTurn()
     {
-        //Dice1 = Random.Range(1, 6);
-        //Dice2 = Random.Range(1, 6);
-
-        //manaIncreasePerTurn = Dice2 + Dice1;
-
         Debug.Log("=== PLAYER TURN START ===");
 
         currentTurn = CardOwner.Player;
@@ -69,13 +53,6 @@ public class TurnManager : MonoBehaviour
                 maxMana);
 
         Debug.Log("Player Mana After Regen: " + ManaManager.Instance.playerMana);
-
-        Dice1 = Random.Range(1, 6);
-        Dice2 = Random.Range(1, 6);
-
-        ManaManager.Instance.playerMana = 0;
-        ManaManager.Instance.playerMana = Dice1 + Dice2;
-
 
 
 
@@ -106,14 +83,7 @@ public class TurnManager : MonoBehaviour
 
         ResetAttacks(CardOwner.Enemy);
 
-        Dice1 = Random.Range(1, 6);
-        Dice2 = Random.Range(1, 6);
-
-        ManaManager.Instance.enemyMana = 0;
-        ManaManager.Instance.enemyMana = Dice1 + Dice2;
-
         EnemyManager.Instance.TakeTurn();
-
     }
 
     public void EndEnemyTurn()
