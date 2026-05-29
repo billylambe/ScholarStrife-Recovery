@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 844351633}
   - component: {fileID: 844351634}
   m_Layer: 0
-  m_Name: Art Manager
+  m_Name: ArtworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1490,6 +1490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43d3c3ad9ac95344b64819be32800a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkLibrary:
+  - artworkID: Goblin
+    artworkSprite: {fileID: 3573036208370857778, guid: 6dd0afd1318afa84bbf4b0631276b97f, type: 3}
+  - artworkID: Knight
+    artworkSprite: {fileID: -1842358489535769202, guid: 722b484e41f861a4b904b22977f987cf, type: 3}
 --- !u!1 &891826144
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +4068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.z
-      value: 1.3297324
+      value: 1.3696551
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSizeBase

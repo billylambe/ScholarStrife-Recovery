@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardView : MonoBehaviour
 {
@@ -10,15 +11,24 @@ public class CardView : MonoBehaviour
     public TMP_Text healthText;
     public TMP_Text descriptionText;
     public Sprite cardSprite;
+    public Image artworkSlot;
 
     private CardData currentData;
-
-    public ArtworkManager GetArtwork;
 
 
     public CardData CurrentData
     {
         get { return currentData; }
+    }
+
+    [SerializeField] ArtworkManager artworkManager;
+
+    private void Awake()
+    {
+        if (artworkManager == null)
+        {
+            artworkManager = FindFirstObjectByType<ArtworkManager>();
+        }
     }
 
     public void Setup(CardData newData)
@@ -34,7 +44,8 @@ public class CardView : MonoBehaviour
         manaText.text = CurrentData.manaCost.ToString();
         attackText.text = CurrentData.attack.ToString();
         descriptionText.text = CurrentData.description;
-       // cardSprite = ArtworkManager.GetArtwork(CurrentData.cardName);
+        cardSprite = artworkManager.GetArtwork(CurrentData.cardName);
+        artworkSlot.sprite = cardSprite;
     }
 
     // Runtime combat health updates

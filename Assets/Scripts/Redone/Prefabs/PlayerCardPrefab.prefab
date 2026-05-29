@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 6240372651127328349}
   - component: {fileID: 5604379458376121608}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ArtSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1783,6 +1783,9 @@ MonoBehaviour:
   attackText: {fileID: 4196414340102011639}
   healthText: {fileID: 460312073940430393}
   descriptionText: {fileID: 4103148737070721125}
+  cardSprite: {fileID: 0}
+  artworkSlot: {fileID: 5604379458376121608}
+  artworkManager: {fileID: 0}
 --- !u!114 &1905553280800385606
 MonoBehaviour:
   m_ObjectHideFlags: 0
