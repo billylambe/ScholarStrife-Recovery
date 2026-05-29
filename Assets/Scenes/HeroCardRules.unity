@@ -484,8 +484,8 @@ MonoBehaviour:
 
 
     The Hero card also displays the Players Health (As shown
-    in the blue heart) and Mana (As shown in the blue dice), while the Enemies Hero
-    card displays only their Health.
+    in the blue heart with the 00) and Mana (As shown in the blue dice with the XX),
+    while the Enemies Hero card displays only their Health.
 
 '
   m_isRightToLeft: 0
@@ -652,6 +652,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732636436672628175, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921259024167317245, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921259024167317245, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921259024167317245, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921259024167317245, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8387302993796552819, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}

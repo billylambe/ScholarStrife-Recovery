@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 // Handles global hero rules and setup
 public class HeroManager : MonoBehaviour
@@ -25,6 +29,12 @@ public class HeroManager : MonoBehaviour
 
     [Header("Win State")]
     public bool gameEnded;
+
+    public GameObject textObject;
+    public GameObject playAgain;
+    public GameObject mainMenu;
+    public Text victoryText;
+
 
     private void Awake()
     {
@@ -68,18 +78,20 @@ public class HeroManager : MonoBehaviour
             return;
         }
 
-        if (playerHero.currentHealth <= 0)
+        if (playerCurrentHealth <= 0)
         {
-            gameEnded = true;
-
-            Debug.Log("Enemy Wins");
+            textObject.SetActive(true);
+            playAgain.SetActive(true);
+            mainMenu.SetActive(true);
+            victoryText.text = "Defeat";
         }
 
-        if (enemyHero.currentHealth <= 0)
+        if (enemyCurrentHealth <= 0)
         {
-            gameEnded = true;
-
-            Debug.Log("Player Wins");
+            textObject.SetActive(true);
+            playAgain.SetActive(true);
+            mainMenu.SetActive(true);
+            victoryText.text = "Victory";
         }
     }
 }

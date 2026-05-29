@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 
 // Represents a player or enemy hero
 public class EnemyHeroCard : MonoBehaviour
@@ -14,6 +17,8 @@ public class EnemyHeroCard : MonoBehaviour
     [Header("Runtime Mana")]
     public int enemycurrentMana;
     public TMP_Text enemymanaText;
+
+    public static event Action OnEnemyLose; 
 
     //void Start()
     //{
@@ -33,6 +38,16 @@ public class EnemyHeroCard : MonoBehaviour
         enemycurrentHealth -= amount;
 
         HeroManager.Instance.CheckWinCondition();
+
+        //if (currentHealth < 0)
+        //{
+        //    OnPlayerLose.Invoke();
+        //}
+
+        //if (currentHealth == 0)
+        //{
+        //    OnPlayerLose.Invoke();
+        //}
     }
 
     //dynamic health diosplay

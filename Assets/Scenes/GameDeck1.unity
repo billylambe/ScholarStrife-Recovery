@@ -2651,6 +2651,10 @@ MonoBehaviour:
   playerCurrentHealth: 0
   enemyCurrentHealth: 0
   gameEnded: 0
+  textObject: {fileID: 1806062302}
+  playAgain: {fileID: 89592307}
+  mainMenu: {fileID: 1606712459}
+  victoryText: {fileID: 1806062304}
 --- !u!1 &1158681695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +2954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffce6c08392f444af99ade843ee8c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  results: {fileID: 0}
   textObject: {fileID: 1806062302}
   playAgain: {fileID: 89592307}
   mainMenu: {fileID: 1606712459}
