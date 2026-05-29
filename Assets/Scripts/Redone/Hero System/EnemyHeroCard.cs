@@ -15,6 +15,11 @@ public class EnemyHeroCard : MonoBehaviour
     public int enemycurrentMana;
     public TMP_Text enemymanaText;
 
+    //void Start()
+    //{
+    //    enemycurrentHealth = 20;
+    //}
+
     private void FixedUpdate()
     {
         enemyhealthText.text = enemycurrentHealth.ToString();

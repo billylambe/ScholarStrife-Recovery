@@ -475,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 1596171232}
   playAgain: {fileID: 158603409}
+  mainMenu: {fileID: 1771460339}
   victoryText: {fileID: 1596171234}
   playerCheck: 0
   enemyCheck: 0
@@ -1178,7 +1179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.z
-      value: 0.15830469
+      value: 1.3341775
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSizeBase
@@ -2298,6 +2299,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43d3c3ad9ac95344b64819be32800a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkLibrary:
+  - artworkID: Clay golem
+    artworkSprite: {fileID: -4436753199102907734, guid: ce92260cb6068d847b64fa4626638f52, type: 3}
+  - artworkID: Iron golem
+    artworkSprite: {fileID: -6726220058678191534, guid: 273c2aef138f4b04aa22882966e96e0c, type: 3}
+  - artworkID: Titan's Herald
+    artworkSprite: {fileID: -1793035303873912436, guid: a90d001270b18b140a6ed17c4d2816e4, type: 3}
+  - artworkID: The Primordial
+    artworkSprite: {fileID: 1926513522899021662, guid: 503fd8cdb9ef3e4448344334a083e9f2, type: 3}
+  - artworkID: Mineral golem
+    artworkSprite: {fileID: 4644441929038935591, guid: f1797bb7873f8e944b3da982d3942568, type: 3}
+  - artworkID: Dawn beast
+    artworkSprite: {fileID: 795270794757088994, guid: 4de5149a6d9cc3545934ec5bc0b7a31a, type: 3}
+  - artworkID: Ruin golem
+    artworkSprite: {fileID: 6122613224301088877, guid: 87bf0c1092f649747a2cf027567b1c10, type: 3}
+  - artworkID: Mechanical golem
+    artworkSprite: {fileID: -4052899999883704663, guid: 8a034f1d18df00549866348f02ce64fc, type: 3}
+  - artworkID: Borun - Void titan
+    artworkSprite: {fileID: -6061872586886501370, guid: 3b3234beba15bc340b57af91f24a0989, type: 3}
+  - artworkID: Imix - Fire titan
+    artworkSprite: {fileID: 814160512889142889, guid: 78360b2f30cde2e45ab511bfbe22bac6, type: 3}
+  - artworkID: Ogru - Earth titan
+    artworkSprite: {fileID: -2101892883353625925, guid: e0a3f4acc79e7fb4e86fb84b1bbbc3bd, type: 3}
+  - artworkID: Aatsu - Sky titan
+    artworkSprite: {fileID: 3032363475642774400, guid: d447b0f54d264b4458fb300357baf4d0, type: 3}
+  - artworkID: Eiros - Water titan
+    artworkSprite: {fileID: -3065385607412255563, guid: dba49ef647c1f9949b4a99d7b18841aa, type: 3}
+  - artworkID: Uva - World titan
+    artworkSprite: {fileID: -7249602804444019425, guid: 3e5faa0bf9a02934fa1f6aadec4503e3, type: 3}
+  - artworkID: Uvon - Celestial titan
+    artworkSprite: {fileID: -6360309279101532931, guid: 52308d46042171642b044145f5680526, type: 3}
 --- !u!1 &1089166759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2834,6 @@ RectTransform:
   m_Children:
   - {fileID: 570595586}
   - {fileID: 2049468496}
-  - {fileID: 81348410}
   - {fileID: 303911659}
   - {fileID: 791082454}
   - {fileID: 961732008}
@@ -2812,6 +2843,7 @@ RectTransform:
   - {fileID: 1688251449}
   - {fileID: 2021221062}
   - {fileID: 635826961}
+  - {fileID: 81348410}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -1446,55 +1446,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776654476}
   m_CullTransparentMesh: 1
---- !u!1 &844351632
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 844351633}
-  - component: {fileID: 844351634}
-  m_Layer: 0
-  m_Name: ArtworkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &844351633
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844351632}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2044604617}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844351634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844351632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a43d3c3ad9ac95344b64819be32800a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  artworkLibrary:
-  - artworkID: Goblin
-    artworkSprite: {fileID: 3573036208370857778, guid: 6dd0afd1318afa84bbf4b0631276b97f, type: 3}
-  - artworkID: Knight
-    artworkSprite: {fileID: -1842358489535769202, guid: 722b484e41f861a4b904b22977f987cf, type: 3}
 --- !u!1 &891826144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1661,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &951978172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951978173}
+  - component: {fileID: 951978174}
+  m_Layer: 0
+  m_Name: ArtworkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &951978173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951978172}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2044604617}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951978174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951978172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43d3c3ad9ac95344b64819be32800a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  artworkLibrary:
+  - artworkID: Bat
+    artworkSprite: {fileID: -697763020151794088, guid: 68701657bfa78124a9cb7ac9a3236ec9, type: 3}
+  - artworkID: Skeleton
+    artworkSprite: {fileID: -964824239653993824, guid: 334b30e660e47de4bb3a95b8f049ef8f, type: 3}
+  - artworkID: Zombie
+    artworkSprite: {fileID: -5782521184205631276, guid: c6e38353e9c131540893abff03ad90f1, type: 3}
+  - artworkID: Vampire
+    artworkSprite: {fileID: -2904457877120967500, guid: 2bbb48b0966707b48bd9abe4875a0a11, type: 3}
+  - artworkID: Swarm of bats
+    artworkSprite: {fileID: -4403024954239264334, guid: be74f506051f58b489923ff6542f4945, type: 3}
+  - artworkID: Flesh beast
+    artworkSprite: {fileID: -6464061916403589639, guid: 2c495bb05d31eee44b62e4e64b972ef8, type: 3}
+  - artworkID: Wight
+    artworkSprite: {fileID: 6529432885773194905, guid: c0bea83edb10c4048a4644436beb9603, type: 3}
+  - artworkID: Ghost
+    artworkSprite: {fileID: -5899927303015767666, guid: caf822fa19fa401468ea51273c718eb0, type: 3}
+  - artworkID: Lich
+    artworkSprite: {fileID: -2858330702786226967, guid: 396cc844653cb6f489d8a49f9eef69f1, type: 3}
+  - artworkID: Wisp
+    artworkSprite: {fileID: -4493590007624933022, guid: 0c4b40f217418924fb50a6d0ee20ee05, type: 3}
 --- !u!1 &970182567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,6 +2952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 1806062302}
   playAgain: {fileID: 89592307}
+  mainMenu: {fileID: 0}
   victoryText: {fileID: 1806062304}
   playerCheck: 0
   enemyCheck: 0
@@ -3812,7 +3829,7 @@ Transform:
   - {fileID: 33062341}
   - {fileID: 1078220206}
   - {fileID: 672857065}
-  - {fileID: 844351633}
+  - {fileID: 951978173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2044604618

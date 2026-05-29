@@ -7,28 +7,34 @@ public class ResultScreen : MonoBehaviour
 {
     public GameObject textObject;
     public GameObject playAgain;
+    public GameObject mainMenu;
     public Text victoryText;
-    public int playerCheck;
-    public int enemyCheck;
+    public float playerCheck;
+    public float enemyCheck;
 
     void Start()
     {
         textObject.SetActive(false);
         playAgain.SetActive(false);
+        mainMenu.SetActive(false);
     }
 
     private void FixedUpdate()
     {
-        playerCheck = GameObject.Find("PlayerHeroCard").GetComponent<HeroCard>().currentHealth;
-        enemyCheck = GameObject.Find("EnemyHeroCard").GetComponent<EnemyHeroCard>().enemycurrentHealth;
+        playerCheck = 20;
+        enemyCheck = 20;
     }
 
     private void Update()
     {
+        playerCheck = GameObject.Find("PlayerHeroCard").GetComponent<HeroCard>().currentHealth;
+        enemyCheck = GameObject.Find("EnemyHeroCard").GetComponent<EnemyHeroCard>().enemycurrentHealth;
+
         if (playerCheck <= 0 && enemyCheck > 0)
         {
             textObject.SetActive(true);
             playAgain.SetActive(true);
+            mainMenu.SetActive(true);
             victoryText.text = "Defeat";
         }
 
@@ -36,6 +42,7 @@ public class ResultScreen : MonoBehaviour
         {
             textObject.SetActive(true);
             playAgain.SetActive(true);
+            mainMenu.SetActive(true);
             victoryText.text = "Victory";
         }
 
@@ -43,6 +50,7 @@ public class ResultScreen : MonoBehaviour
         {
             textObject.SetActive(true);
             playAgain.SetActive(true);
+            mainMenu.SetActive(true);
             victoryText.text = "Draw";
         }
 

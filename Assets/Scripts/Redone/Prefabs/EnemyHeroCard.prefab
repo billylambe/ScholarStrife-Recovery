@@ -654,7 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: 1
   currentHealth: 0
-  healthText: {fileID: 0}
+  healthText: {fileID: 7893202764912908229}
   currentMana: 0
   manaText: {fileID: 0}
 --- !u!114 &884266956159387566

@@ -85,7 +85,7 @@ public class CardDatabase : MonoBehaviour
 
         CreateCard("Clay golem", 5, 3, 4, "A mindless but friendly golem made from clay ");
         CreateCard("Iron golem", 6, 4, 5, "A mindless but aggressive golem made from Iron");
-        CreateCard("Herald of the Titans", 2, 1, 2, "Often considered a omen of ruin"); //want to add affect of boosting other cards
+        CreateCard("Titan's Herald ", 2, 1, 2, "Often considered a omen of ruin"); //want to add affect of boosting other cards
         CreateCard("The Primordial", 12, 13, 13, "The prime mover of life and father of all Titans");
         CreateCard("Mineral golem", 5, 3, 5, "A golem born from a geode");
         CreateCard("Dawn beast", 6, 5, 4, "A large beast that hunts at dawn");
@@ -93,7 +93,7 @@ public class CardDatabase : MonoBehaviour
         CreateCard("Mechanical golem", 4, 4, 6, "A pale attempt to imitate golems");
         CreateCard("Clay golem", 5, 3, 4, "A mindless but friendly golem made from clay ");
         CreateCard("Iron golem", 6, 4, 5, "A mindless but aggressive golem made from Iron");
-        CreateCard("Herald of the Titans", 2, 1, 2, "Often considered a omen of ruin"); //want to add affect of boosting other cards
+        CreateCard("Titan's Herald", 2, 1, 2, "Often considered a omen of ruin"); //want to add affect of boosting other cards
         CreateCard("Borun - Void titan", 11, 11, 8, "The titan who holds life from the abyss");
         CreateCard("Imix - Fire titan", 7, 8, 6, "The titan shaper of flames");
         CreateCard("Ogru - Earth titan", 8, 6, 10, "The titan who shaped the continents");
