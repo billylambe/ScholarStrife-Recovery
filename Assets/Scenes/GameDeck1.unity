@@ -416,8 +416,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6077737953387033172, guid: 545bfb0311e4da140a71e537a46f254f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -558,7 +558,6 @@ RectTransform:
   m_Children:
   - {fileID: 2127885988}
   - {fileID: 2097124454}
-  - {fileID: 1454201740}
   - {fileID: 1026602735}
   - {fileID: 294815843}
   - {fileID: 1495760154}
@@ -568,6 +567,7 @@ RectTransform:
   - {fileID: 1070258032}
   - {fileID: 2040173339}
   - {fileID: 2108800283}
+  - {fileID: 1454201740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2919,7 +2919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1454201740
 Transform:
   m_ObjectHideFlags: 0
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 1806062302}
   playAgain: {fileID: 89592307}
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 1606712459}
   victoryText: {fileID: 1806062304}
   playerCheck: 0
   enemyCheck: 0
@@ -3301,8 +3301,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6077737953387033172, guid: 545bfb0311e4da140a71e537a46f254f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3762,6 +3762,14 @@ PrefabInstance:
       value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
+      propertyPath: m_margin.x
+      value: 34.106567
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
+      propertyPath: m_margin.z
+      value: 112.49646
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
       propertyPath: m_fontSizeBase
       value: 27
       objectReference: {fileID: 0}
@@ -4124,12 +4132,16 @@ PrefabInstance:
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_margin.w
+      value: 16.295055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.y
-      value: -0.7880678
+      value: 1.295639
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.z
-      value: 0.20291138
+      value: 1.18573
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSizeBase
