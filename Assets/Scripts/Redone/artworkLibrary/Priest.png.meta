@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6dd0afd1318afa84bbf4b0631276b97f
+guid: 9f99c51cedd84c94c8733b84195adbaa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3573036208370857778
-    second: download_0
+      213: -4749681873034518491
+    second: Priest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: download_0
+      name: Priest_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 331
-        height: 152
+        width: 254
+        height: 247
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 237bd813089f59130800000000000000
-      internalID: 3573036208370857778
+      spriteID: 5206aa9508db51eb0800000000000000
+      internalID: -4749681873034518491
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      download_0: 3573036208370857778
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

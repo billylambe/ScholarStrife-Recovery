@@ -4328,9 +4328,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkLibrary:
   - artworkID: Goblin
-    artworkSprite: {fileID: 3573036208370857778, guid: 6dd0afd1318afa84bbf4b0631276b97f, type: 3}
+    artworkSprite: {fileID: -1139428579820881798, guid: 7ba29b502288ab54cae4b6039a53ad0c, type: 3}
   - artworkID: Knight
+    artworkSprite: {fileID: 2382543463544445115, guid: 3dfd8b795dea87540856c1a23c738f06, type: 3}
+  - artworkID: Wolf
+    artworkSprite: {fileID: -458185587419916677, guid: eb04536c216acbc4c93d8ba5e1a24f87, type: 3}
+  - artworkID: Archer
+    artworkSprite: {fileID: -7132172409892320828, guid: d3ab50b617cda8e489146448e6ba82a3, type: 3}
+  - artworkID: Golem
+    artworkSprite: {fileID: -8063424969907974100, guid: 266620f0b6324614785ac3e1e345c056, type: 3}
+  - artworkID: Mage
+    artworkSprite: {fileID: -7285376162372006033, guid: 9ca8ab6a7947e8d438d383f9fd92a109, type: 3}
+  - artworkID: Bandit
+    artworkSprite: {fileID: -1897662275881480441, guid: 53ce1e94f5c0f4e47b5d1143a61517da, type: 3}
+  - artworkID: Paladin
+    artworkSprite: {fileID: -8594515011827703002, guid: 61d41ddca834b8940889d87655b454e5, type: 3}
+  - artworkID: Dragon
+    artworkSprite: {fileID: 1372335161102834277, guid: 1850ae797596fe34dba80eafbce26884, type: 3}
+  - artworkID: Slime
+    artworkSprite: {fileID: -7282886668606283007, guid: d38fb4e6fb85ca54e97548dc1a1ee0ee, type: 3}
+  - artworkID: Assassin
+    artworkSprite: {fileID: 7863553717130063180, guid: 4ca286435ea566a4bbb4842ea7051030, type: 3}
+  - artworkID: Priest
+    artworkSprite: {fileID: -4749681873034518491, guid: 9f99c51cedd84c94c8733b84195adbaa, type: 3}
+  - artworkID: Skeleton
+    artworkSprite: {fileID: -289439259285793824, guid: 4be3fe25448c5f64eaf077d187a3f802, type: 3}
+  - artworkID: Warlock
+    artworkSprite: {fileID: -845045197500901298, guid: ba6f7822eedb73848bfa76f0391a451c, type: 3}
+  - artworkID: Guard
+    artworkSprite: {fileID: -7809785511404226330, guid: e2a7a98ca5026ae428bbdf79ffd9365f, type: 3}
+  - artworkID: Warlock
     artworkSprite: {fileID: -1842358489535769202, guid: 722b484e41f861a4b904b22977f987cf, type: 3}
+  - artworkID: Berserker
+    artworkSprite: {fileID: 8703389998563471379, guid: 99e8c412b55dad94385d7d01fecab11a, type: 3}
+  - artworkID: Druid
+    artworkSprite: {fileID: 3461459112936250053, guid: f20c010b8058c02499aa4075a63fd816, type: 3}
+  - artworkID: Phoenix
+    artworkSprite: {fileID: -4453784588268070965, guid: db8b4587726bbc048907879f11b48165, type: 3}
+  - artworkID: Pirate
+    artworkSprite: {fileID: -5383109096222793229, guid: e4ea42fa5073d3e4e8b6776ff28da48c, type: 3}
+  - artworkID: King
+    artworkSprite: {fileID: -4821530343430527414, guid: 092df8c891835864da28c302c7b5e5f6, type: 3}
+  - artworkID: Echo Master
+    artworkSprite: {fileID: 9062254848792220436, guid: d71cd4c9ca6acf643ac0e9302a36f5b7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
