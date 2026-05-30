@@ -496,6 +496,14 @@ PrefabInstance:
       value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
+      propertyPath: m_margin.x
+      value: 30.349365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
+      propertyPath: m_margin.z
+      value: 103.92114
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893202764912908229, guid: 02dfea2c97f2f93428278c35880d63a8, type: 3}
       propertyPath: m_fontSizeBase
       value: 27
       objectReference: {fileID: 0}
@@ -784,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.z
-      value: 0.15830469
+      value: 1.2866874
       objectReference: {fileID: 0}
     - target: {fileID: 973723569308425615, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSizeBase
@@ -820,19 +828,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSize
-      value: 1.1
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
+      propertyPath: m_margin.w
+      value: 16.27409
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.y
-      value: -0.7880678
+      value: 1.2741451
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_margin.z
-      value: 0.20291138
+      value: 1.0589294
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_fontSizeBase
-      value: 1.1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6122260365502981328, guid: 21b0b73dd254872458cc2cd88656561b, type: 3}
       propertyPath: m_HorizontalAlignment
