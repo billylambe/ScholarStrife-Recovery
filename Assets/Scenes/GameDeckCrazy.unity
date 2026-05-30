@@ -1297,10 +1297,10 @@ MonoBehaviour:
   playerCurrentHealth: 0
   enemyCurrentHealth: 0
   gameEnded: 0
-  textObject: {fileID: 0}
-  playAgain: {fileID: 0}
-  mainMenu: {fileID: 0}
-  victoryText: {fileID: 0}
+  textObject: {fileID: 1526390055}
+  playAgain: {fileID: 1829200008}
+  mainMenu: {fileID: 722941947}
+  victoryText: {fileID: 1526390057}
 --- !u!1 &694139431
 GameObject:
   m_ObjectHideFlags: 0
