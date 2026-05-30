@@ -1104,8 +1104,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: IncrementalTurnM, Assembly-CSharp
+      - m_Target: {fileID: 120493353}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
         m_MethodName: EndPlayerTurn
         m_Mode: 1
         m_Arguments:
@@ -1297,6 +1297,10 @@ MonoBehaviour:
   playerCurrentHealth: 0
   enemyCurrentHealth: 0
   gameEnded: 0
+  textObject: {fileID: 0}
+  playAgain: {fileID: 0}
+  mainMenu: {fileID: 0}
+  victoryText: {fileID: 0}
 --- !u!1 &694139431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,8 +1507,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6077737953387033172, guid: 545bfb0311e4da140a71e537a46f254f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2357,7 +2361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1220579693
 Transform:
   m_ObjectHideFlags: 0
@@ -2401,7 +2405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0d20a7890ffd4b8c8c09bafeb4368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: GameDeck1
+  gameSceneName: GameDeckCrazy
 --- !u!114 &1220579696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,8 +2418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffce6c08392f444af99ade843ee8c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  results: {fileID: 0}
   textObject: {fileID: 1526390055}
   playAgain: {fileID: 1829200008}
+  mainMenu: {fileID: 722941947}
   victoryText: {fileID: 1526390057}
   playerCheck: 0
   enemyCheck: 0
@@ -3129,7 +3135,6 @@ RectTransform:
   m_Children:
   - {fileID: 987573505}
   - {fileID: 1985644887}
-  - {fileID: 1220579693}
   - {fileID: 1312541182}
   - {fileID: 1429234252}
   - {fileID: 1060520428}
@@ -3139,6 +3144,7 @@ RectTransform:
   - {fileID: 360005383}
   - {fileID: 182870266}
   - {fileID: 292105750}
+  - {fileID: 1220579693}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3397,8 +3403,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6077737953387033172, guid: 545bfb0311e4da140a71e537a46f254f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4206,8 +4212,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
