@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Deck1Rules.unity
     guid: 5510a38f4befe3a40aa60e27963e8662
   - enabled: 1
+    path: Assets/Scenes/Deck3Rules.unity
+    guid: 0fa260e2232414746a8ae5f9180f8325
+  - enabled: 1
+    path: Assets/Scenes/HeroCardRules.unity
+    guid: f62606a08dcabf349b6e96c6ec5dc95b
+  - enabled: 1
     path: Assets/Scenes/Deck2Rules.unity
     guid: ac489ae9a20a0704f89bc74719a0dc64
   - enabled: 1

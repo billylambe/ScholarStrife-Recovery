@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 86.6}
+  m_AnchoredPosition: {x: -5, y: 98}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17950150
@@ -177,12 +177,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "During the playerss turn they can draw a card and can either place any
-    cards they can afford or they can save their Mana to place more expensive cards
-    instead. \n\nWhen they have cards placed they can attack the enemies cards if
-    they have any on field, or if the enemy doesnt have any cards they will attack
-    the enemy directly. \n\nFor the game to contnue the player after they have finished
-    doing what they want to during their turn has to press the end turn button to
-    pass the turn order to the enemy."
+    cards they can afford in the Crazy dice mode or in the incremental mode they
+    can play their cards or save their Mana to place more expensive cards. \n\nWhen
+    they have cards placed they can attack the enemies cards if they have any on
+    field, or if the enemy doesnt have any cards they will attack the enemy directly.
+    \n\nFor the game to contnue the player after they have finished doing what they
+    want to during their turn has to press the end turn button to pass the turn order
+    to the enemy."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -209,8 +210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 19.38
+  m_fontSizeBase: 19.38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
