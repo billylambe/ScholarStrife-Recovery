@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 // Discard Pile (not visually rendered yet)
-// When a card dies in battle (Player or Enemy) we will add it to a list
+// When a card dies in battle (Player or Enemy)  will add it to a list
 // "Used" cards (If you decide to make spell/effect cards) can also go into here
 
 
