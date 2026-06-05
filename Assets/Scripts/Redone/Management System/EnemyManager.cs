@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Handles extremely basic enemy AI behaviour
 public class EnemyManager : MonoBehaviour
@@ -38,6 +39,27 @@ public class EnemyManager : MonoBehaviour
         yield return new WaitForSeconds(actionDelay);
 
         TurnManager.Instance.EndEnemyTurn();
+
+        //Scene scene = SceneManager.GetActiveScene();
+        //if (scene.name == "GameDeck1")
+        //{
+        //    TurnManager.Instance.EndEnemyTurn();
+        //}
+
+        //if (scene.name == "GameDeck2")
+        //{
+        //    TurnManager.Instance.EndEnemyTurn();
+        //}
+
+        //if (scene.name == "GameDeck1Incremental")
+        //{
+        //    IncrementalTurnM.Instance.EndEnemyTurn();
+        //}
+
+        //else
+        //{
+        //    TurnManager.Instance.EndEnemyTurn();
+        //}
     }
 
     // Draw a cards if allowed

@@ -42,6 +42,7 @@ public class IncrementalTurnM : MonoBehaviour
 
     public void StartPlayerTurn()
     {
+        
         Debug.Log("=== PLAYER TURN START ===");
 
         currentTurn = CardOwner.Player;
@@ -54,7 +55,8 @@ public class IncrementalTurnM : MonoBehaviour
 
         Debug.Log("Player Mana After Regen: " + ManaManager.Instance.playerMana);
 
-
+        ManaManager.Instance.playerMana = 0;
+        ManaManager.Instance.playerMana = manaIncreasePerTurn + startingMana;
 
         ResetAttacks(CardOwner.Player);
     }
